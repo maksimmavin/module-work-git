@@ -31,9 +31,8 @@
             font-size: 24px;
         }
 
-        /* Full-screen section */
         .section {
-            height: 100vh; /* Each section takes up the full viewport height */
+            height: 100vh;
             background-color: #282c34;
             padding: 20px;
             border-radius: 5px;
@@ -111,7 +110,6 @@
             margin-bottom: 20px;
         }
 
-        /* Title Screen Styling */
         .title-screen {
             display: flex;
             justify-content: center;
@@ -132,7 +130,7 @@
         }
 
         .content {
-            display: none; /* Hide content initially */
+            display: none;
         }
 
         .imagesertifacate {
@@ -144,15 +142,13 @@
 </head>
 <body>
 
-    <!-- Title Screen -->
     <div class="title-screen">
         <div>
             <h1>Git: Основи та Використання</h1>
-            <p>Проєкт створив: [Ваше Ім'я]</p>
+            <p>Проєкт створив: Король Максим</p>
         </div>
     </div>
 
-    <!-- Content (hidden initially) -->
     <div class="content">
 
         <div class="section" id="section1">
@@ -183,7 +179,6 @@
             </ul>
         </div>
 
-        <!-- New section for the commands -->
         <div class="section1" id="section5">
             <h2>5. 10 базових команд роботи в Git</h2>
 
@@ -256,11 +251,10 @@
     </div>
 
     <script>
-        // Hide title screen after a short delay and show content
         setTimeout(function() {
             document.querySelector('.title-screen').style.display = 'none';
             document.querySelector('.content').style.display = 'block';
-        }, 3000); // 3-second delay
+        }, 3000);
     </script>
 
 </body>

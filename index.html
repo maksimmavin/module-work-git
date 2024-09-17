@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git: Основи та Використання</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #282c34;
+            font-size: 20px;
+            color: white;
+        }
+
+        h1 {
+            color: white;
+            font-size: 84px;
+        }
+
+        h2 
+
+        h2, h3 {
+            color: #333;
+            font-size: 36px;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+
+        /* Full-screen section */
+        .section {
+            height: 100vh; /* Each section takes up the full viewport height */
+            background-color: #282c34;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0;
+            padding-left: 400px; 
+            padding-right: 400px;
+        }
+
+        ul {
+            font-size: 20px;
+        }
+
+        .section1 {
+            padding-top: 100px;
+            height: 160vh;
+            background-color: #282c34;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            align-items: left;
+            margin-bottom: 0;
+        }
+
+        .section2 {
+            height: 100vh;
+            background-color: #282c34;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0;
+        }
+
+        .section2 h2{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section1 h2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        code {
+            background-color: #474747;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .command {
+            background-color: rgb(255, 255, 255);
+            padding: 10px;
+            border-left: 5px solid #007BFF;
+            margin-bottom: 10px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 1em;
+            width: 530px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Title Screen Styling */
+        .title-screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background-color: #282c34;
+            color: #fff;
+        }
+
+        .title-screen h1 {
+            font-size: 4em;
+            margin-bottom: 0.2em;
+        }
+
+        .title-screen p {
+            font-size: 2em;
+        }
+
+        .content {
+            display: none; /* Hide content initially */
+        }
+
+        .imagesertifacate {
+            max-width: 50%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Title Screen -->
+    <div class="title-screen">
+        <div>
+            <h1>Git: Основи та Використання</h1>
+            <p>Проєкт створив: [Ваше Ім'я]</p>
+        </div>
+    </div>
+
+    <!-- Content (hidden initially) -->
+    <div class="content">
+
+        <div class="section" id="section1">
+            <h2>1. Що таке системи контролю версій?</h2>
+            <p>Системи контролю версій (VCS, англ. Version Control System) — це програмне забезпечення, що допомагає відстежувати зміни у вихідному коді або інших файлах проєкту. Вони дозволяють зберігати історію змін, порівнювати версії файлів, а також забезпечують командну роботу над проектами.</p>
+        </div>
+
+        <div class="section" id="section2">
+            <h2>2. Що таке Git?</h2>
+            <p>Git — це розподілена система контролю версій, створена Лінусом Торвальдсом у 2005 році. Вона дозволяє кільком розробникам працювати одночасно над одним проєктом, зберігаючи при цьому історію змін, з можливістю повернення до попередніх версій коду.</p>
+        </div>
+
+        <div class="section" id="section3">
+            <h2>3. Основні можливості Git</h2>
+            <ul>
+                <li>Розподілена структура: кожен користувач має повну копію репозиторію на своєму комп'ютері.</li>
+                <li>Підтримка гілок (branches): дозволяє створювати різні версії проєкту для паралельного розвитку.</li>
+                <li>Система злиття (merge): зручна інтеграція змін з різних гілок.</li>
+            </ul>
+        </div>
+
+        <div class="section" id="section4">
+            <h2>4. Переваги використання Git</h2>
+            <ul>
+                <li>Ефективна командна робота: кілька розробників можуть працювати паралельно без конфліктів.</li>
+                <li>Збереження історії змін: кожен коміт документує всі зміни, включно з коментарями.</li>
+                <li>Простота створення резервних копій: кожен клон репозиторію є резервною копією.</li>
+            </ul>
+        </div>
+
+        <!-- New section for the commands -->
+        <div class="section1" id="section5">
+            <h2>5. 10 базових команд роботи в Git</h2>
+
+            <strong>1. git init</strong><br>
+            Ініціалізує новий репозиторій Git у поточній директорії.<br>
+            <div class="command"> 
+                <code>git init</code>
+            </div>
+
+            <strong>2. git clone</strong><br>
+            Клонує існуючий репозиторій з віддаленого сервера на локальний комп'ютер.<br>
+            <div class="command">
+                <code>git clone &lt;url-репозиторію&gt;</code>
+            </div>
+
+            <strong>3. git status</strong><br>
+            Виводить інформацію про поточний стан робочої директорії.<br>
+            <div class="command">
+                <code>git status</code>
+            </div>
+
+            <strong>4. git add</strong><br>
+            Додає зміни до індексу.<br>
+            <div class="command">
+                <code>git add &lt;назва_файлу&gt;</code><br>
+                <code>git add .</code> (додає всі зміни)
+            </div>
+
+            <strong>5. git commit</strong><br>
+            Фіксує зміни в репозиторії.<br>
+            <div class="command">
+                <code>git commit -m "Опис змін"</code>
+            </div>
+
+            <strong>6. git log</strong><br>
+            Виводить історію комітів.<br>
+            <div class="command">
+                <code>git log</code>
+            </div>
+
+            <strong>7. git branch</strong><br>
+            Створює нову гілку.<br>
+            <div class="command">
+                <code>git branch &lt;ім'я_гілки&gt;</code>
+            </div>
+
+            <strong>8. git checkout</strong><br>
+            Перемикається на іншу гілку або відновлює файли.<br>
+            <div class="command">
+                <code>git checkout &lt;назва_файлу&gt;</code>
+            </div>
+
+            <strong>9. git merge</strong><br>
+            Зливає зміни з іншої гілки.<br>
+            <div class="command">
+                <code>git merge &lt;ім'я_гілки&gt;</code>
+            </div>
+
+            <strong>10. git push</strong><br>
+            Відправляє зміни з локального репозиторію.<br>
+            <div class="command">
+                <code>git push &lt;ім'я_віддаленого_репозиторію&gt; &lt;ім'я_гілки&gt;</code>
+            </div>
+        </div>
+
+        <div class="section2" id="section6">
+            <h2>Сертифікат курсу Git</h2>
+            <img class="imagesertifacate" src="images/Screenshot_1.png" alt="Сертифікат курсу Git">
+        </div>
+    </div>
+
+    <script>
+        // Hide title screen after a short delay and show content
+        setTimeout(function() {
+            document.querySelector('.title-screen').style.display = 'none';
+            document.querySelector('.content').style.display = 'block';
+        }, 3); // 3-second delay
+    </script>
+
+</body>
+</html>
